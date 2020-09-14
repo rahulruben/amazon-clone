@@ -11,8 +11,8 @@ Used Stripe for payment and confirming the order.
 **UI Layer**: [React](https://reactjs.org/)<br />
 **State Management**: React's Context API<br />
 **Database**: Firestore<br />
-**Authentication**: Firebase Email Authentication
-**API**: Axios
+**Authentication**: Firebase Email Authentication<br />
+**API**: Axios<br />
 **Server**: Node
 
 
