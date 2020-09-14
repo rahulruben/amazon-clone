@@ -16,7 +16,7 @@ Used Stripe for payment and confirming the order.
 **Server**: Node
 
 
-Features: 
+**Features:** 
 
 1. Email Sign In and Sign up functionality.
 2. Add/Remove Products.
