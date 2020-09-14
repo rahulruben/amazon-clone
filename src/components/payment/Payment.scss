@@ -1,0 +1,68 @@
+.payment {
+    background-color: #fff;
+
+    .payment__container>h1 {
+        text-align: center;
+        padding: 10px;
+        font-weight: 600;
+        background-color: rgb(234, 237, 237);
+        border-bottom: 1px solid #d3d3d3;
+
+        a {
+            text-decoration: none;
+        }
+    }
+
+    .payment__section {
+        display: flex;
+        padding: 20px;
+        margin: 0 20px;
+        border-bottom: 1px solid #d3d3d3;
+
+        .payment__title {
+            flex: 0.2
+        }
+
+        .payment__items,
+        .payment__details,
+        .payment__address {
+            flex: 0.8
+        }
+
+        .StripeElement {
+            margin-bottom: 10px;
+        }
+
+        form {
+            max-width: 400px;
+            .payment__buy-btn {
+                margin: 10px 0;
+                border: 1px solid #d8dad4;
+                background-color: #ffd814;
+                outline: none;
+                width: 100%;
+                font-weight: 600;
+                padding: 10px 30px;
+                border-radius: 15px;
+                cursor: pointer;
+                text-transform: uppercase;
+            }
+
+        }
+
+        .payment__error {
+            font-size: 12px;
+            color: #c40000;
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+
+            .MuiSvgIcon-root {
+                font-size: 1.5em;
+                margin-right: 5px;
+            }
+        }
+    }
+
+
+}

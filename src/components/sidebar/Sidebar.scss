@@ -1,0 +1,110 @@
+.sidebar {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 3000;
+    pointer-events: none;
+
+    .sidebar__overlay {
+        position: absolute;
+        display: block;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, .8);
+        opacity: 0;
+        transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+    }
+
+    .sidebar__container {
+        position: relative;
+        width: 20%;
+        height: 100%;
+        min-width: 250px;
+        background-color: #fff;
+        transform: translateX(-120%);
+        transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+
+        .sidebar__header {
+            position: relative;
+            height: 50px;
+            background-color: #232f3e;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            color: #fff;
+            padding: 0 2em;
+
+            .sidebar__title {
+                font-weight: 300;
+            }
+
+            svg.MuiSvgIcon-root {
+                font-size: 2em;
+                margin-right: 10px;
+            }
+
+            .header__close {
+                transform: translate(50%);
+                left: 100%;
+                position: absolute;
+                font-size: 1em;
+                color: #fff;
+                transform: scale(1);
+                transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+            }
+        }
+
+        .sidebar__items {
+            margin-top: 1em;
+
+            .sidebar__category {
+                margin: 1em 2em;
+                font-size: 0.875em;
+                color: #879596;
+            }
+
+            ul {
+                list-style: none;
+            }
+
+            .sidebar__item {
+                padding: 1em 2em;
+                font-size: .875em;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                cursor: pointer;
+
+                svg.MuiSvgIcon-root {
+                    color: #879596;
+                    font-size: 1em;
+                }
+
+                &:hover {
+                    background-color: #eaeded;
+
+                    svg.MuiSvgIcon-root {
+                        color: #000;
+                    }
+                }
+            }
+        }
+    }
+
+
+}
+
+.sidebar.opened {
+    background-color: transparent;
+    pointer-events: visible;
+
+    .sidebar__overlay {
+        opacity: 1;
+    }
+
+    .sidebar__container {
+        transform: none;
+    }
+}
